@@ -30,6 +30,8 @@ public class WebplatformApplication {
 			InputStream _inputApplicationFile = new FileInputStream("msrtc_graph_application.properties");
 		    Properties _prop = new Properties();
 		    _prop.load(_inputApplicationFile);
+		   
+		    
 		    ctx = new SpringApplicationBuilder(WebplatformApplication.class).properties(_prop).run(args);
 		    
 		    LoadCashe load = ctx.getBean(LoadCashe.class);
@@ -43,7 +45,7 @@ public class WebplatformApplication {
 		    	logger.info("Code running on server now ----------");
 		    	ConstantData.is_server = 1;
 		    }
-		     
+		     System.out.println("test git..");
 		  ConstantData.thirdParty_Api = _prop.getProperty("server.thirdpartiapi");
 		 ConstantData.raw_data_root_path = _prop.getProperty("server.raw.data");
 		 createDirectories("json_activity/");
