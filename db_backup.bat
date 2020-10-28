@@ -1,0 +1,1 @@
+mysqldump.exe --user=root --password=root --host=localhost --port=3306 --result-file="C:\Users\DEEPAK\Desktop\file\msrtc_cleaning_portal_bkup\backup.%date:~10,4%%date:~7,2%%date:~4,2%.sql" --databases "world"
